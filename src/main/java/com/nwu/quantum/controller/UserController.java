@@ -38,11 +38,13 @@ public class UserController {
     @ResponseBody
     public String register(String email, String password)
     {
-        userService.register(email,password);
-        System.out.println("注册成功");
-        return "注册成功";
-
-
+        int count = userService.register(email,password);
+        if (count == 0) {
+            return "注册失败！";
+        }
+        else {
+            return "注册成功！";
+        }
     }
 
     @RequestMapping(value = {"user/login"})
@@ -53,7 +55,8 @@ public class UserController {
             return "登录失败";
         } else {
             System.out.println("用户信息为：" + userInfo.getEmail() + " " + userInfo.getPassword());
+            return "登录成功";
         }
-        return "登录成功";
+
     }
 }

@@ -17,6 +17,6 @@ public interface UserService {
      * @param email 邮箱
      * @param password 密码
      */
-    public  void  register(String email,String password);
+    public  int  register(String email,String password);
 }
 
