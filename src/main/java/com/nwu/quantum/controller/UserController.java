@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
     @Autowired
     UserService userService;
-
     /**
      * 跳转到登录测试页面
      * @return 登录页面
@@ -57,6 +56,5 @@ public class UserController {
             System.out.println("用户信息为：" + userInfo.getEmail() + " " + userInfo.getPassword());
             return "登录成功";
         }
-
     }
 }
