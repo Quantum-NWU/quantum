@@ -111,10 +111,10 @@
             parameterType="com.nwu.quantum.entity.User" >
         SELECT
         s.email AS email,
---         s.img_url AS imgUrl,
---         s.regist_time AS registTime,
---         s.status AS status,
---         s.role AS role,
+        s.img_url AS imgUrl,
+        s.regist_time AS registTime,
+        s.status AS status,
+        s.role AS role,
         s.password AS password
         FROM qc_user s
         WHERE 1=1
